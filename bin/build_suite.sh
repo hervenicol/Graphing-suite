@@ -24,8 +24,10 @@ install_collectd() {
 
 download_dependencies() {
 	mkdir -p "$work_dir"/downloads
-	wget -nv -O "$work_dir"/downloads/start_influxdb.sh https://github.com/hervenicol/docker-influxdb/raw/master/start.sh
-	wget -nv -O "$work_dir"/downloads/start_grafana.sh https://github.com/hervenicol/docker-grafana/raw/master/start.sh
+	wget -nv -O "$work_dir"/downloads/start_influxdb.sh \
+		https://raw.githubusercontent.com/hervenicol/docker-influxdb/influxdb_0.9.3/start.sh
+	wget -nv -O "$work_dir"/downloads/start_grafana.sh \
+		https://raw.githubusercontent.com/hervenicol/docker-grafana/grafana_2.1.0/start.sh
 }
 
 run_influxdb() {
